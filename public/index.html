@@ -15,12 +15,20 @@
         <div id="toggle-theme" onclick="toggle()">
           <i class="material-icons theme-icon">light_mode</i>
         </div>
-        <!-- <i class="material-icons">dark_mode</i> -->
       </header>
 
-      <div id="search-bar">
-        <!--input with icon  -->
-        <!-- <button id="search-btn"></button> -->
+      <div id="search-bar-container">
+        <div id="search-bar">
+          <i class="material-icons">search</i>
+
+          <input
+            class="search-field"
+            type="text"
+            placeholder="Search GitHub username..."
+          />
+        </div>
+
+        <button id="search-btn" onclick="searchUser()">Search</button>
       </div>
 
       <div id="user-profile">

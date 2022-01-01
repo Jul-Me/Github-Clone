@@ -2,7 +2,7 @@
 
 :root {
   --bg-color: #131c2f;
-  --bg-light: #232535;
+  --bg-light: #1e2a48;
   --font-color: #c5cddb;
   --font-light: #ffffff;
 }
@@ -34,8 +34,6 @@ body {
 
 #container {
   background-color: inherit;
-  border: 3px solid #5c6b86;
-  border-radius: 12px;
   padding: 15px;
   text-align: center;
   max-width: 100%;
@@ -43,9 +41,7 @@ body {
   position: fixed;
   top: 10%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
 }
 
 header {
@@ -55,4 +51,42 @@ header {
   align-content: center;
   flex: 1;
   align-items: center;
+}
+
+#search-bar-container {
+  background-color: var(--bg-light);
+  padding: 10px;
+  border-radius: 12px;
+}
+
+#search-bar-container,
+#search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+}
+
+.search-field {
+  width: 100%;
+  background-color: var(--bg-light);
+  color: var(--font-light);
+
+  border: none;
+  margin-left: 10px;
+}
+
+.search-field:focus-visible {
+  outline: none;
+  color: var(--font-light);
+}
+
+#search-btn {
+  background-color: var(--font-light);
+  padding: 10px;
+  border-radius: 8px;
+  color: var(--bg-color);
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
