@@ -37,7 +37,7 @@ body {
   padding: 15px;
   text-align: center;
   max-width: 100%;
-  width: 600px;
+  width: 1000px;
   position: fixed;
   top: 10%;
   display: flex;
@@ -53,10 +53,16 @@ header {
   align-items: center;
 }
 
-#search-bar-container {
+#search-bar-container,
+#user-profile-container {
   background-color: var(--bg-light);
   padding: 10px;
   border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+#user-profile-container {
+  padding: 30px;
 }
 
 #search-bar-container,
@@ -82,11 +88,70 @@ header {
 }
 
 #search-btn {
-  background-color: var(--font-light);
+  background-color: #0479ff;
   padding: 10px;
   border-radius: 8px;
-  color: var(--bg-color);
+  color: #fff;
   outline: none;
   border: none;
   cursor: pointer;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 0.5;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#avatar {
+  border-radius: 50% !important;
+  height: auto;
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1;
+  vertical-align: middle;
+  background-color: #f0f6fc1a !important;
+  border-radius: 6px;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px #f0f6fc1a;
+  width: 50% !important;
+  border: 1px solid #30363d !important;
+}
+
+#name {
+  font-size: 25px;
+}
+
+#joined,
+#bio {
+  font-size: 14px;
+  color: #9fabb4;
+}
+
+#username {
+  font-size: 12px;
+  color: #0479ff;
+  text-decoration: none;
 }

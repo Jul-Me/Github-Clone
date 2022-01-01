@@ -12,6 +12,7 @@
     <div id="container">
       <header>
         <h4>Find your Dev!</h4>
+
         <div id="toggle-theme" onclick="toggle()">
           <i class="material-icons theme-icon">light_mode</i>
         </div>
@@ -31,7 +32,36 @@
         <button id="search-btn" onclick="searchUser()">Search</button>
       </div>
 
-      <div id="user-profile">
+      <div id="user-profile-container">
+        <div class="row">
+          <div class="left-column">
+            <img alt="profile-picture" id="avatar" />
+          </div>
+
+          <div class="right-column">
+            <div class="row space-between">
+              <span id="name"></span>
+              <span id="joined"></span>
+            </div>
+
+            <div class="row">
+              <a id="username"></a>
+            </div>
+
+            <div class="row">
+              <span id="bio"> </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="left-column"></div>
+          <div class="right-column">
+            profile info here 12 profile info here 12 profile info here 12
+            profile info here 12
+          </div>
+        </div>
+
         <!-- <i class="material-icons">place</i> -->
         <!-- <i class="material-icons">link</i> -->
       </div>
