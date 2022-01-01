@@ -32,7 +32,7 @@
         <button id="search-btn" onclick="searchUser()">Search</button>
       </div>
 
-      <div id="user-profile-container">
+      <div id="user-profile-container" class="hidden">
         <div class="row">
           <div class="left-column">
             <img alt="profile-picture" id="avatar" />
@@ -94,6 +94,8 @@
           </div>
         </div>
       </div>
+
+      <span id="not-found" class="hidden">Sorry, this user does not exist</span>
     </div>
 
     <script src="main.js"></script>

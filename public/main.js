@@ -18,12 +18,23 @@ async function searchUser() {
   const response = await fetch(`https://api.github.com/users/${searchValue}`);
   const data = await response.json();
 
-  console.log('data', data);
-
   if (data) {
-    appendUserBio(data);
-    appendUserStats(data);
-    appendUserLinks(data);
+    const notFoundEl = document.querySelector('#not-found');
+    const userProfileContainerEl = document.querySelector(
+      '#user-profile-container'
+    );
+
+    if (data.message === 'Not Found') {
+      notFoundEl.classList.remove('hidden');
+      userProfileContainerEl.classList.add('hidden');
+    } else {
+      userProfileContainerEl.classList.remove('hidden');
+      notFoundEl.classList.add('hidden');
+
+      appendUserBio(data);
+      appendUserStats(data);
+      appendUserLinks(data);
+    }
   }
 }
 
@@ -49,7 +60,7 @@ function appendUserBio(user) {
   usernameEl.target = '_blank';
 
   const bioEl = document.querySelector('#bio');
-  bioText = bio.replace(/(\r\n|\n|\r)/gm, '');
+  bioText = bio && bio.replace(/(\r\n|\n|\r)/gm, '');
   bioEl.innerText = bioText || 'This profile has no bio';
 }
 
