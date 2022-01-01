@@ -1,0 +1,58 @@
+/* by default dark theme */
+
+:root {
+  --bg-color: #131c2f;
+  --bg-light: #232535;
+  --font-color: #c5cddb;
+  --font-light: #ffffff;
+}
+
+/* light theme colors */
+
+.lightMode {
+  --bg-color: #e8e6dc;
+  --bg-light: #dcdaca;
+  --font-color: #3d3d3d;
+  --font-light: #131c2f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  height: 100vh;
+  color: var(--font-light);
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-color);
+  transition: all 500ms;
+}
+
+#container {
+  background-color: inherit;
+  border: 3px solid #5c6b86;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  max-width: 100%;
+  width: 600px;
+  position: fixed;
+  top: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-content: center;
+  flex: 1;
+  align-items: center;
+}
