@@ -22,8 +22,8 @@ async function searchUser() {
 
   if (data) {
     appendUserBio(data);
-    // appendUserStats(data);
-    // appendUserLinks(data);
+    appendUserStats(data);
+    appendUserLinks(data);
   }
 }
 
@@ -49,5 +49,31 @@ function appendUserBio(user) {
   usernameEl.target = '_blank';
 
   const bioEl = document.querySelector('#bio');
-  bioEl.innerText = bio || 'This profile has no bio';
+  bioText = bio.replace(/(\r\n|\n|\r)/gm, '');
+  bioEl.innerText = bioText || 'This profile has no bio';
+}
+
+function appendUserStats(user) {
+  const { followers, following, public_repos } = user;
+
+  const reposEl = document.querySelector('#repos');
+  reposEl.innerText = public_repos;
+
+  const followersEl = document.querySelector('#followers');
+  followersEl.innerText = followers;
+
+  const followingEl = document.querySelector('#following');
+  followingEl.innerText = following;
+}
+
+function appendUserLinks(user) {
+  const { location, html_url } = user;
+
+  const locationEl = document.querySelector('#location');
+  locationEl.innerText = location;
+
+  const profileEl = document.querySelector('#profile');
+  profileEl.innerText = html_url;
+  profileEl.href = html_url;
+  profileEl.target = '_blank';
 }

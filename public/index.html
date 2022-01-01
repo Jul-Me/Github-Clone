@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Dev Finder</title>
+    <title>Github User Search</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -11,7 +11,7 @@
   <body>
     <div id="container">
       <header>
-        <h4>Find your Dev!</h4>
+        <h4>GitHub User Search</h4>
 
         <div id="toggle-theme" onclick="toggle()">
           <i class="material-icons theme-icon">light_mode</i>
@@ -48,7 +48,7 @@
               <a id="username"></a>
             </div>
 
-            <div class="row">
+            <div class="row margin-top">
               <span id="bio"> </span>
             </div>
           </div>
@@ -56,14 +56,43 @@
 
         <div class="row">
           <div class="left-column"></div>
-          <div class="right-column">
-            profile info here 12 profile info here 12 profile info here 12
-            profile info here 12
+
+          <div class="right-column stats-container">
+            <div class="row space-around">
+              <div class="stats-box">
+                <span class="stats-title"> Repos </span>
+                <span id="repos"></span>
+              </div>
+
+              <div class="stats-box">
+                <span class="stats-title"> Followers </span>
+                <span id="followers"></span>
+              </div>
+
+              <div class="stats-box">
+                <span class="stats-title"> Following </span>
+                <span id="following"></span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- <i class="material-icons">place</i> -->
-        <!-- <i class="material-icons">link</i> -->
+        <div class="row">
+          <div class="left-column"></div>
+          <div class="right-column">
+            <div class="row space-between">
+              <div class="links">
+                <i class="material-icons link-icon">place</i>
+                <span id="location"></span>
+              </div>
+
+              <div class="links">
+                <i class="material-icons link-icon">link</i>
+                <a id="profile"></a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

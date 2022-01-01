@@ -54,11 +54,16 @@ header {
 }
 
 #search-bar-container,
-#user-profile-container {
+#user-profile-container,
+.stats-container {
   background-color: var(--bg-light);
   padding: 10px;
   border-radius: 12px;
   margin-bottom: 20px;
+}
+
+.stats-container {
+  background-color: var(--bg-color);
 }
 
 #user-profile-container {
@@ -102,7 +107,7 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .right-column {
@@ -125,6 +130,15 @@ header {
   align-items: center;
 }
 
+.space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.margin-top {
+  margin-top: 20px;
+}
+
 #avatar {
   border-radius: 50% !important;
   height: auto;
@@ -145,13 +159,41 @@ header {
 }
 
 #joined,
-#bio {
+#bio,
+.stats-title {
   font-size: 14px;
   color: #9fabb4;
+}
+
+#bio {
+  text-align: left;
 }
 
 #username {
   font-size: 12px;
   color: #0479ff;
   text-decoration: none;
+}
+
+.stats-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 16px;
+}
+
+.link-icon {
+  margin-right: 5px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--font-light);
 }
